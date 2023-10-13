@@ -1,0 +1,70 @@
+{% extends 'main.html' %} {% block content %}
+
+<!-- <nav class="navbar navbar-dark navbar-expand-md bg-dark">
+  <div class="container">
+    <button
+      data-toggle="collapse"
+      class="navbar-toggler"
+      data-target="#navcol-1"
+    >
+      <span class="sr-only">Toggle navigation</span
+      ><span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="nav navbar-nav flex-grow-1 justify-content-between">
+        <li
+          class="nav-item active"
+          style="font-size: large; text-decoration: underline"
+        >
+          <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+        </li>
+        <li
+          class="nav-item active"
+          style="font-size: large; text-decoration: underline"
+        >
+          <a class="nav-link" href="{{ url_for('diabetesPage') }}">Diabetes</a>
+        </li>
+        <li
+          class="nav-item active"
+          style="font-size: large; text-decoration: underline"
+        >
+          <a class="nav-link" href="{{ url_for('heartPage') }}">Heart</a>
+        </li>
+        <li
+          class="nav-item active"
+          style="font-size: large; text-decoration: underline"
+        >
+          <a class="nav-link" href="{{ url_for('kidneyPage') }}">Kidney</a>
+        </li>
+        <li
+          class="nav-item active"
+          style="font-size: large; text-decoration: underline"
+        >
+          <a class="nav-link" href="{{ url_for('liverPage') }}">Liver</a>
+        </li>
+        <li
+          class="nav-item active"
+          style="font-size: large; text-decoration: underline"
+        >
+          <a class="nav-link" href="{{ url_for('cancerPage') }}">Cancer</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<div class="row" style="margin-bottom: 477px">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    {% if pred == 1 %}
+    <div class="card card-body alert alert-danger">
+      <center>That's a worry! , You may have to consult a Doctor.</center>
+    </div>
+    {% else %}
+    <div class="card card-body alert alert-success">
+      <center>Great! You are Healthy.</center>
+    </div>
+    {% endif %}
+  </div>
+  <div class="col-md-3"></div>
+</div>
+{% endblock %}
